@@ -81,12 +81,8 @@ Y bualah! Estamos dentro del sistema! Al parecer la contraseña no nos sirvió p
 ![image](https://user-images.githubusercontent.com/106914229/172170385-9eea98e0-8ec3-449f-b532-4f6dbecabe1f.png)
 
 Ahora solo queda escalar privilegios. En este caso voy a usar la herramienta linpeas para comprobar si hay alguna vulnerabilidad que podamos aprovechar para escalar privilegios.
-Parece que la maquina no nos permite copiar linpeas.sh directamente asi que primero descargaremos el fichero en la maquina atacante, luego crearemos un servidor HTTP y accederemos a el desde la maquina víctima para descargar el fichero, darle permisos de ejecución y ejecutarlo:
-
-![image](https://user-images.githubusercontent.com/106914229/172175784-2a0e54da-fb36-43f2-a212-5db811be59fd.png)
-![image](https://user-images.githubusercontent.com/106914229/172175846-07130247-153b-4bfc-8e7c-cec3135f681d.png)
 
 
-
+Esta parte esta incompleta y pendiente de acabar
 
 
