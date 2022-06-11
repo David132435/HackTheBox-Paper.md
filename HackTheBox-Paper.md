@@ -80,9 +80,27 @@ Y bualah! Estamos dentro del sistema! Al parecer la contraseña no nos sirvió p
 
 ![image](https://user-images.githubusercontent.com/106914229/172170385-9eea98e0-8ec3-449f-b532-4f6dbecabe1f.png)
 
-Ahora solo queda escalar privilegios. En este caso voy a usar la herramienta linpeas para comprobar si hay alguna vulnerabilidad que podamos aprovechar para escalar privilegios.
+Ahora solo queda escalar privilegios. En este caso voy a usar la herramienta linpeas para comprobar si hay alguna vulnerabilidad que podamos aprovechar para escalar privilegios. La máquina no nos permite descargar linpeas directamente, asi que vamos a tener que descargarlo en nuestro equipo, montar un servidor http con python y acceder desde la máquina:
+
+![image](https://user-images.githubusercontent.com/106914229/173204279-944ec1e5-e4bb-4881-b5a7-43b124494d3f.png)
+
+![image](https://user-images.githubusercontent.com/106914229/173204285-5af76df1-ff07-4585-ba6c-6df7c9556295.png)
+
+![tempsnip](https://user-images.githubusercontent.com/106914229/173204423-02ddbb94-a838-474e-b648-8f5cf08969b6.png)
+
+Gracias a linpeas podemos ver que la máquina es vulnerable a CVE-2021-3560 asi caso voy a usar el exploit de secnigma (que es también el creador de la máquina paper): https://github.com/secnigma/CVE-2021-3560-Polkit-Privilege-Esclation/blob/main/poc.sh No he encontrado una forma cómoda de descargar el script por linea de comandos asi que lo que he terminado por hacer ha sido copiar el script y pegarlo en un fichero nuevo acabado en .sh (utilizando nano para escribir un nuevo fichero):
+
+![image](https://user-images.githubusercontent.com/106914229/173204755-1a97ae30-9ee9-4f3d-af95-86b913c356dd.png)
+
+![image](https://user-images.githubusercontent.com/106914229/173204798-4832829f-c36c-4701-903c-c5c0d27536ae.png)
+
+![image](https://user-images.githubusercontent.com/106914229/173204834-7bec7669-fe13-426f-bcea-6b729edf8806.png)
+
+En mi caso tuve que ejecutar el script varias veces hasta que funcionó. Ahora probaremos a utilizar el nuevo usuario que se ha creado. El nombre de usuario es "secnigma" y la contraseña "secnigmaftw". Cuando estemos en el sitema como el usuario secnigma tan solo tendremos que ejecutar "sudo bash" para convertirnos en root y poder ver la flag.
+
+![image](https://user-images.githubusercontent.com/106914229/173205220-1a519c20-7b3a-469c-a44c-648eee1d4700.png)
 
 
-Esta parte esta incompleta y pendiente de acabar
+
 
 
